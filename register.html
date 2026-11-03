@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دربني | إنشاء حساب</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- جهة الفورم -->
+  <main class="panel">
+    <section class="card">
+      <h1>أنشئ حسابك</h1>
+
+      <form id="registerForm" action="register.php" method="POST" novalidate>
+        <div class="field">
+          <label for="username">اسم المستخدم</label>
+          <input id="username" name="username" type="text" dir="auto" autocomplete="username" required>
+        </div>
+
+        <div class="field">
+          <label for="email">البريد الإلكتروني</label>
+          <input id="email" name="email" type="email" dir="auto" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="password">كلمة المرور</label>
+          <div class="pw">
+            <input id="password" name="password" type="password" dir="auto" autocomplete="new-password" required>
+            <button type="button" class="toggle" data-target="password" aria-pressed="false">إظهار</button>
+          </div>
+          <p class="hint">8 أحرف على الأقل.</p>
+        </div>
+
+        <div class="field">
+          <label for="confirm_password">تأكيد كلمة المرور</label>
+          <div class="pw">
+            <input id="confirm_password" name="confirm_password" type="password" dir="auto" autocomplete="new-password" required>
+            <button type="button" class="toggle" data-target="confirm_password" aria-pressed="false">إظهار</button>
+          </div>
+        </div>
+
+        <p class="error" id="error" role="alert" hidden></p>
+
+        <button type="submit" class="submit">إنشاء الحساب</button>
+      </form>
+
+      <p class="alt">عندك حساب؟ <a href="login.html">سجّل دخولك</a></p>
+    </section>
+  </main>
+
+  <!-- جهة التصميم -->
+  <aside class="art">
+    <svg class="lanes" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-width="30" stroke-linecap="round">
+        <circle class="lane c1" cx="600" cy="800" r="90" pathLength="1" transform="rotate(90 600 800)" style="--i:0;--len:.54"/>
+        <circle class="lane c2" cx="600" cy="800" r="138" pathLength="1" transform="rotate(90 600 800)" style="--i:1;--len:.54"/>
+        <circle class="lane c3" cx="600" cy="800" r="186" pathLength="1" transform="rotate(90 600 800)" style="--i:2;--len:.54"/>
+        <circle class="lane c1" cx="600" cy="800" r="234" pathLength="1" transform="rotate(90 600 800)" style="--i:3;--len:.54"/>
+        <circle class="lane c2" cx="600" cy="800" r="282" pathLength="1" transform="rotate(90 600 800)" style="--i:4;--len:.54"/>
+        <circle class="lane c3" cx="600" cy="800" r="330" pathLength="1" transform="rotate(90 600 800)" style="--i:5;--len:.54"/>
+        <circle class="lane c1" cx="600" cy="800" r="378" pathLength="1" transform="rotate(90 600 800)" style="--i:6;--len:.54"/>
+        <circle class="lane c2" cx="600" cy="800" r="426" pathLength="1" transform="rotate(90 600 800)" style="--i:7;--len:.54"/>
+        <circle class="lane c3" cx="600" cy="800" r="474" pathLength="1" transform="rotate(90 600 800)" style="--i:8;--len:.54"/>
+      </g>
+    </svg>
+
+    <div class="brand">
+      <p class="name">دربني</p>
+      <p class="tagline">مدرّبك الذكي متى ما تبي</p>
+    </div>
+  </aside>
+
+  <script src="register.js"></script>
+</body>
+</html>
